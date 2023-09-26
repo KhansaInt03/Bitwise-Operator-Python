@@ -31,9 +31,8 @@ def NOT(text):
     process = ~text
     to_bin = bin(process)
     res_b = [ i.replace('b','') for i in to_bin ]
-    res_chr = chr(int(to_bin,2))
 
-    return res_b, res_chr
+    return res_b
 
 
 def shift_left(text,val):
@@ -61,7 +60,7 @@ while True:
     if to_do == '1':
         time.sleep(1)
         bin_1 = int(input('Binary 1 : '),2)
-        bin_2 = int(input('Binary 1 : '),2)
+        bin_2 = int(input('Binary 2 : '),2)
         a,b = xor(bin_1, bin_2)
         time.sleep(1)
         print('Result as binary :', *a,sep='')
@@ -71,7 +70,7 @@ while True:
     elif to_do == '2':
         time.sleep(1)
         bin_1 = int(input('Binary 1 : '),2)
-        bin_2 = int(input('Binary 1 : '),2)
+        bin_2 = int(input('Binary 2 : '),2)
         a,b = OR(bin_1, bin_2)
         time.sleep(1)
         print('Result as binary :', *a,sep='')
@@ -81,7 +80,7 @@ while True:
     elif to_do == '3':
         time.sleep(1)
         bin_1 = int(input('Binary 1 : '),2)
-        bin_2 = int(input('Binary 1 : '),2)
+        bin_2 = int(input('Binary 2 : '),2)
         a,b = AND(bin_1, bin_2)
         time.sleep(1)
         print('Result as binary :', *a,sep='')
@@ -91,11 +90,9 @@ while True:
     elif to_do == '4':
         time.sleep(1)
         bin_1 = int(input('Binary : '),2)
-        a,b = NOT(bin_1)
+        a = NOT(bin_1)
         time.sleep(1)
         print('Result as binary :', *a,sep='')
-        time.sleep(0.5)
-        print('Result as character :', b)
 
     elif to_do == '5':
         time.sleep(1)
